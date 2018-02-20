@@ -6,6 +6,14 @@
 //  if the sum of two numbers is negative
 //
 //------------------------------------------------------------------
+function sumMinZero(num1, num2){
+	let result = num1 + num2 
+	if (result < 0 ) {
+		return 0
+	}else{
+		return result
+	}
+}
 
 console.assert(sumMinZero(10, 10) === 20)
 console.assert(sumMinZero(30, 10) === 40)
@@ -24,7 +32,18 @@ console.assert(sumMinZero(1848, -4124) === 0)
 //------------------------------------------------------------------
 
 
+function getInput(text){
+	if (typeof text === "string") {
+		return "DATA_RECEIVED: "+ text
+	} else if (typeof text ===  "number"){
+		return "Please provide a string input, NOT a number"
+	} else if (text === undefined ) {
+		return "Please provide string input."
+	}
+}
+
+
 console.assert(getInput() === "Please provide string input.")
 console.assert(getInput(333) === "Please provide a string input, NOT a number")
 console.assert(getInput('Mister Teatime') === "DATA_RECEIVED: Mister Teatime")
-console.assert(getInput('Charlotte') === "DATA_RECEIVED: Charolette")
+console.assert(getInput('Charolette') === "DATA_RECEIVED: Charolette")

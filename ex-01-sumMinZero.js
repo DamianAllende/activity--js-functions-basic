@@ -5,6 +5,18 @@
 //
 //------------------------------------------------------------------
 
+
+function sumMinZero(num1, num2){
+	let result = num1 + num2 
+	if (result < 0 ) {
+		return 0
+	}else{
+		return result
+	}
+}
+
+
+
 console.assert(sumMinZero(10, 10) === 20)
 console.assert(sumMinZero(30, 10) === 40)
 console.assert(sumMinZero(-30, 10) === 0)
